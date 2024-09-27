@@ -6,6 +6,8 @@ const sections = document.querySelectorAll('main section');
 
 const max = window.screen.width
 
+toggleSidebar.classList.add("hidden")
+
 toggleSidebar.onclick = function() {
     toggleSidebar.classList.toggle('active');
     sidebar.classList.toggle('active');
