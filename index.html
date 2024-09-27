@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ftnick.xyz</title>
+    <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+    <button id="toggleSidebar" class="toggle-button">►</button> 
+    <nav id="sidebar">
+        <br/>
+        <a class="navitem" href="#welcome">Welcome</a>
+        <a class="navitem" href="#projects">Our Projects</a>
+        <a class="navitem" href="#contact">Contact</a>
+        <button class="settings-button" id="settingsButton">Settings</button>
+    </nav>
+
+    <main>
+        <section id="welcome">
+            <h1 class="title">Welcome To ftnick.xyz</h1>
+            <h2 class="subtitle">a domain operated by ftnick on behlaf of XYZ development</h2>
+        </section>
+        <div class="divider"></div>
+        <section id="projects">
+            <h1 class="title">Our Projects</h1>
+            <h2 class="subtitle">we have mutiple free and paid projects that may peak your interest</h2>
+            <p class="bold">File Encryption Using Python (Opensource):</p>
+            <div class="expandable">
+                <p class="githubnotice">This service can be found on its dedicated github repository, where you can find the files related to the project.</p>
+                <button class="button" onclick="window.location.href='https://github.com/ftnick/cryption'">Github</button>
+            </div>
+            <p class="bold">Roblox Music Downloader (Opensource):</p>
+            <div class="expandable">
+                <p>A simple open-source python project that downloads roblox music using hyrda.io api.</p>
+                <p class="githubnotice">This service can be found on its dedicated github repository, where you can find the files related to the project.</p>
+                <button class="button" onclick="window.location.href='https://github.com/ftnick/RobloxMusicDownloader'">Github</button>
+            </div>
+        </section>
+        <div class="divider"></div>
+        <section id="contact"></section>
+            <h1 class="title">Contact</h1>
+            <h2 class="subtitle">feel free to contact me at any time for any reason</h2>
+            <ul class="rowtext centeredtext">
+                <li><a class="atag" href="https://discord.com/users/701632642822701057">Discord (@ftnick)</a></li>
+                <li><a class="atag" href="https://www.roblox.com/users/885446584/profile">Roblox (@repostnick)</a></li>
+                <li><a class="atag" href="https://snapchat.com/t/9ABgYpHC">Snapchat (@ftnick)</a></li>
+            </ul>
+        </section>
+
+        <div class="divider"></div>
+        
+        <div id="settingsModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="closeModal">&times;</span>
+                <h2>Settings</h2>
+                <div>
+                    <label for="darkModeToggle">Enable Dark Mode:</label>
+                    <input type="checkbox" id="darkModeToggle" checked>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 ftnick.xyz | All rights reserved.</p>
+            <p><a href="#welcome">Back to Top</a></p>
+        </footer>        
+    </main>
+
+    <script src="./assets/sidebar.js"></script>
+    <script src="./assets/settings.js"></script>
+    <script>
+        const maxWidth = window.screen.width - 1; // Get the user's screen width minus 1
+const styleElement = document.createElement('style');
+styleElement.textContent = `
+    @media (max-width: ${maxWidth}px) {
+        nav {
+            display: none; /* Hide the sidebar */
+        }
+
+        .toggle-button {
+            display: block; /* Show the toggle button */
+        }
+    }
+`;
+document.head.appendChild(styleElement);
+
+    </script>
+</body>
+</html>

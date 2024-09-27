@@ -1,0 +1,494 @@
+/* Global Styles */
+* {
+    all: none;
+    transition: color 0.3s, background-color 0.3s, transform 0.2s;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+    background-color: #121212; /* Dark mode background */
+    color: #e0e0e0; /* Dark mode text color */
+    font-size: 16px;
+    line-height: 1.6;
+    min-height: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Light Mode Styles */
+body.light-mode {
+    background-color: #ffffff; /* Background color for light mode */
+    color: #121212; /* Text color for light mode */
+}
+
+/* Smooth transitions for hover effects */
+a, button {
+    transition: color 0.3s, background-color 0.3s, transform 0.2s;
+}
+
+/* Navigation Sidebar */
+nav {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    padding: 20px; /* Space inside the sidebar */
+    background-color: #1f1f1f; /* Background color for sidebar */
+    position: fixed; /* Keeps the sidebar fixed on the screen */
+    top: 0; /* Aligns to the top */
+    left: 0; /* Aligns to the left */
+    height: 100%; /* Full height of the viewport */
+    width: 200px; /* Width of the sidebar */
+    z-index: 1000; /* Ensures it is above other elements */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* Subtle shadow on the right */
+}
+
+/* Light Mode Navigation Sidebar */
+nav.light-mode {
+    background-color: #f0f0f0; /* Light mode background for sidebar */
+}
+
+/* Navigation Item Styles */
+.navitem {
+    color: #e0e0e0; /* Text color for nav items */
+    text-decoration: none; /* Removes underline */
+    padding: 15px 20px; /* Adds padding around each item */
+    margin: 5px 0; /* Space between items */
+    font-weight: bold; /* Bold text */
+    letter-spacing: 1px; /* Space between letters */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+/* Light Mode Navigation Item Styles */
+.navitem.light-mode {
+    color: #121212; /* Light mode text color for nav items */
+}
+
+/* Active Navigation Item */
+.navitem.active {
+    background-color: #333; /* Background color for active item */
+    color: #bb86fc; /* Text color for active item */
+}
+
+/* Light Mode Active Navigation Item */
+.navitem.active.light-mode {
+    background-color: #e0e0e0; /* Light mode active background */
+    color: #bb86fc; /* Light mode active text color */
+}
+
+/* Hover Effect for Navigation Items */
+.navitem:hover {
+    background-color: #333; /* Background color on hover */
+    color: #bb86fc; /* Color change on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Light Mode Hover Effect for Navigation Items */
+.navitem:hover.light-mode {
+    background-color: #d1d1d1; /* Light mode hover background */
+    color: #bb86fc; /* Light mode hover text color */
+}
+
+/* Section Styling */
+main {
+    padding: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+.title {
+    font-size: 2.5rem;
+    color: #bb86fc;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Light Mode Title */
+.title.light-mode {
+    color: #6200ea; /* Light mode title color */
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: #e0e0e0;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Light Mode Subtitle */
+.subtitle.light-mode {
+    color: #424242; /* Light mode subtitle color */
+}
+
+/* Divider Line */
+.divider {
+    width: 100%;
+    height: 1px;
+    background-color: #333;
+    margin: 40px 0; /* Adds spacing above and below the divider */
+    border: none;
+    opacity: 0.8;
+}
+
+/* Light Mode Divider Line */
+.divider.light-mode {
+    background-color: #ccc; /* Light mode divider color */
+}
+
+/* Unordered List (ul) */
+ul {
+    list-style-type: none; /* Removes default bullets */
+    padding-left: 0; /* Removes default left padding */
+    margin: 20px 0; /* Adds space above and below the list */
+}
+
+/* List Items (li) */
+li {
+    margin-bottom: 10px; /* Adds space between list items */
+    padding: 10px;
+    background-color: #1e1e1e; /* Background for list items */
+    border-radius: 5px; /* Rounded corners */
+    color: #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for list items */
+}
+
+/* Light Mode List Items */
+li.light-mode {
+    background-color: #f0f0f0; /* Light mode background for list items */
+    color: #121212; /* Light mode text color for list items */
+}
+
+/* Hover Effect for List Items */
+li:hover {
+    background-color: #333;
+    transform: scale(1.02);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Light Mode Hover Effect for List Items */
+li:hover.light-mode {
+    background-color: #d1d1d1; /* Light mode hover background */
+}
+
+/* Centered Text */
+.centeredtext {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    text-align: center; /* Ensures text is centered inside the element */
+    margin: 0;
+}
+
+/* Row Text (Horizontal Layout for Child Elements) */
+.rowtext {
+    display: flex;
+    flex-direction: row; /* Aligns children in a row */
+    gap: 15px; /* Adds space between each element */
+    flex-wrap: nowrap; /* Prevents wrapping to the next line */
+}
+
+.rowtext p, .rowtext a {
+    margin: 0; /* Removes default margin for p and a elements */
+}
+
+/* Anchor (a) Tag Styling */
+.atag {
+    color: #bb86fc; /* Default link color in dark mode */
+    text-decoration: none; /* Removes default underline */
+    font-weight: 500;
+    transition: color 0.3s, text-shadow 0.2s;
+}
+
+/* Light Mode Anchor Tag */
+.atag.light-mode {
+    color: #6200ea; /* Light mode link color */
+}
+
+/* Hover and Focus Effects */
+.atag:hover, .atag:focus {
+    color: #ff79c6; /* Change color on hover/focus */
+    text-shadow: 0 0 5px rgba(255, 121, 198, 0.7); /* Glowing effect */
+    outline: none; /* Remove focus outline */
+}
+
+/* Light Mode Hover and Focus Effects */
+.atag.light-mode:hover, .atag.light-mode:focus {
+    color: #ff79c6; /* Light mode hover color */
+}
+
+/* Active Link */
+.atag:active {
+    color: #ff5555; /* Different color when link is clicked */
+    text-shadow: none; /* Remove glowing effect */
+}
+
+/* Light Mode Active Link */
+.atag.light-mode:active {
+    color: #ff5555; /* Light mode active link color */
+}
+
+/* Bolded Text */
+.bold {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Light Mode Bolded Text */
+.bold.light-mode {
+    color: #121212; /* Light mode bold text color */
+}
+
+/* Settings Button */
+.settings-button {
+    margin-top: auto; /* Push to the bottom of the sidebar */
+    padding: 10px 20px;
+    background-color: #bb86fc; /* Button color */
+    color: #121212; /* Text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+/* Light Mode Settings Button */
+.settings-button.light-mode {
+    background-color: #6200ea; /* Light mode button color */
+    color: #ffffff; /* Light mode text color */
+}
+
+.settings-button:hover {
+    background-color: #ff79c6; /* Button hover color */
+}
+
+/* Light Mode Settings Button Hover */
+.settings-button.light-mode:hover {
+    background-color: #ff79c6; /* Light mode hover button color */
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1001; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
+}
+
+/* Light Mode Modal Background */
+.modal.light-mode {
+    background-color: rgba(255, 255, 255, 0.8); /* Light mode modal background */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #1f1f1f; /* Dark background */
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px; /* Padding */
+    border: 1px solid #888; /* Border */
+    width: 300px; /* Width of the modal */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Light Mode Modal Content */
+.modal-content.light-mode {
+    background-color: #ffffff; /* Light mode modal background */
+    color: #121212; /* Light mode modal text color */
+}
+
+/* Close Button */
+.close {
+    color: #aaa; /* Close button color */
+    float: right; /* Float to the right */
+    font-size: 28px; /* Larger font */
+    font-weight: bold; /* Bold font */
+}
+
+/* Light Mode Close Button */
+.close.light-mode {
+    color: #333; /* Light mode close button color */
+}
+
+.close:hover,
+.close:focus {
+    color: #fff; /* Change color on hover */
+    text-decoration: none; /* No underline */
+    cursor: pointer; /* Pointer cursor */
+}
+
+/* Expandable Div */
+.expandable {
+    background-color: #1e1e1e;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Light Mode Expandable Div */
+.expandable.light-mode {
+    background-color: #f0f0f0; /* Light mode background for expandable div */
+}
+
+/* GitHub Notice */
+.githubnotice {
+    color: #b0bec5;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+/* Light Mode GitHub Notice */
+.githubnotice.light-mode {
+    color: #000000; /* Light mode text color */
+}
+
+/* Button Styling */
+.button {
+    background-color: #bb86fc;
+    color: #121212;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Light Mode Button */
+.button.light-mode {
+    background-color: #6200ea; /* Light mode button color */
+    color: #ffffff; /* Light mode button text color */
+}
+
+.button:hover, .button:focus {
+    background-color: #ff79c6; /* Change color on hover/focus */
+    text-shadow: 0 0 5px rgba(255, 121, 198, 0.7); /* Glowing effect */
+    outline: none; /* Remove focus outline */
+    transform: translateY(-2px);
+}
+
+/* Light Mode Button Hover */
+.button.light-mode:hover, .button.light-mode:focus {
+    background-color: #ff79c6; /* Light mode button hover color */
+}
+
+/* Active Button */
+.button:active {
+    background-color: #ff5555; /* Different color when link is clicked */
+    text-shadow: none; /* Remove glowing effect */
+}
+
+/* Light Mode Active Button */
+.button.light-mode:active {
+    background-color: #ff5555; /* Light mode active button color */
+}
+
+/* Footer Styling */
+footer {
+    background-color: transparent; /* Dark background color */
+    color: #e0e0e0; /* Light text color */
+    padding: 20px; /* Space around the content */
+    text-align: center; /* Center the text */
+    position: relative; /* Ensure it stays at the bottom */
+    bottom: 0; /* Align it to the bottom */
+    width: 100%; /* Full width */
+}
+
+/* Light Mode Footer */
+footer.light-mode {
+    background-color: #ffffff; /* Light mode footer background */
+    color: #121212; /* Light mode footer text color */
+}
+
+/* Footer Links */
+footer a {
+    color: #bb86fc; /* Link color */
+    text-decoration: none; /* Remove underline */
+    margin: 0 10px; /* Space between links */
+}
+
+/* Light Mode Footer Links */
+footer.light-mode a {
+    color: #6200ea; /* Light mode footer link color */
+}
+
+/* Footer Link Hover */
+footer a:hover {
+    color: #ff79c6; /* Change color on hover */
+    text-shadow: 0 0 5px rgba(255, 121, 198, 0.7); /* Glowing effect */
+}
+
+/* Light Mode Footer Link Hover */
+footer.light-mode a:hover {
+    color: #ff79c6; /* Light mode footer link hover color */
+}
+
+/* Small Text for Copyright */
+footer p {
+    font-size: 0.9rem; /* Slightly smaller font for copyright text */
+    margin-top: 10px; /* Space above the copyright text */
+    color: #b0bec5; /* Lighter color for contrast */
+}
+
+/* Light Mode Small Text for Copyright */
+footer.light-mode p {
+    color: #424242; /* Light mode copyright text color */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navitem {
+        padding: 10px 0;
+        margin: 5px 0;
+    }
+}
+
+/* Button to toggle sidebar */
+.toggle-button {
+    position: fixed; /* Stay in place */
+    top: 10px; /* Adjust as needed */
+    left: 10px; /* Adjust as needed */
+    padding: 10px 15px; /* Padding for the button */
+    background-color: #bb86fc; /* Background color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    z-index: 1001; /* On top of other elements */
+    rotate: 0deg;
+}
+
+.toggle-button.active {
+    rotate: 180deg;
+}
+
+.toggle-button.hidden {
+    display: none;
+}
+
+/* Show sidebar when active */
+nav.active {
+    display: flex; /* Show the sidebar when active */
+}
