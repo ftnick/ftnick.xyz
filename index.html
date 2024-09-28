@@ -7,24 +7,17 @@
     <link rel="stylesheet" href="./assets/styles.css">
 </head>
 <body>
-    <button id="toggleSidebar" class="toggle-button">►</button> 
-    <nav id="sidebar">
-        <br/>
-        <a class="navitem" href="#welcome">Welcome</a>
-        <a class="navitem" href="#projects">Our Projects</a>
-        <a class="navitem" href="#contact">Contact</a>
-        <button class="settings-button" id="settingsButton">Settings</button>
-    </nav>
-
-    <main>
+    <main id="page">
         <section id="welcome">
             <h1 class="title">Welcome To ftnick.xyz</h1>
-            <h2 class="subtitle">a domain operated by ftnick on behlaf of XYZ development</h2>
+            <h2 class="subtitle">a domain operated by ftnick on behalf of XYZ development</h2>
         </section>
+
         <div class="divider"></div>
+
         <section id="projects">
             <h1 class="title">Our Projects</h1>
-            <h2 class="subtitle">we have mutiple free and paid projects that may peak your interest</h2>
+            <h2 class="subtitle">we have multiple free and paid projects that may peak your interest</h2>
             <p class="bold">File Encryption Using Python (Opensource):</p>
             <div class="expandable">
                 <p class="githubnotice">This project can be found on its dedicated github repository, where you can find the files related to the project.</p>
@@ -38,13 +31,15 @@
             </div>
             <p class="bold">XexusAI (Longterm | Paid):</p>
             <div class="expandable">
-                <p>XexusAI is a new personal assistant AI created by XYZ DEVELOPMENT along with SYNTHEX SOFTWORKS. The AI is focused on improving and automating tasks, while being overly friendly and smart. Stay tuned for development updates and enclosed testing opportunities.</p>
+                <p>XexusAI is a new personal assistant AI created by XYZ DEVELOPMENT along with SYNTHEX SOFTWORKS. The AI is focused on improving and automating tasks, while being overly friendly and smay tuned for development updates and enclosed testing opportunities.</p>
                 <p class="githubnotice">This project can be found on its dedicated github repository, where you can find the files related to the project.</p>
                 <button class="button" onclick="window.location.href='https://github.com/ftnick/XexusAI'">Github</button>
             </div>
         </section>
+
         <div class="divider"></div>
-        <section id="contact"></section>
+
+        <section id="contact">
             <h1 class="title">Contact</h1>
             <h2 class="subtitle">feel free to contact me at any time for any reason</h2>
             <ul class="rowtext centeredtext">
@@ -55,42 +50,11 @@
         </section>
 
         <div class="divider"></div>
-        
-        <div id="settingsModal" class="modal">
-            <div class="modal-content">
-                <span class="close" id="closeModal">&times;</span>
-                <h2>Settings</h2>
-                <div>
-                    <label for="darkModeToggle">Enable Dark Mode:</label>
-                    <input type="checkbox" id="darkModeToggle" checked>
-                </div>
-            </div>
-        </div>
 
         <footer>
             <p>&copy; 2024 ftnick.xyz | All rights reserved.</p>
-            <p><a href="#welcome">Back to Top</a></p>
+            <p><a href="#page">Back to Top</a></p>
         </footer>        
     </main>
-
-    <script src="./assets/sidebar.js"></script>
-    <script src="./assets/settings.js"></script>
-    <script>
-        const maxWidth = window.screen.width - 1; // Get the user's screen width minus 1
-const styleElement = document.createElement('style');
-styleElement.textContent = `
-    @media (max-width: ${maxWidth}px) {
-        nav {
-            display: none; /* Hide the sidebar */
-        }
-
-        .toggle-button {
-            display: block; /* Show the toggle button */
-        }
-    }
-`;
-document.head.appendChild(styleElement);
-
-    </script>
 </body>
 </html>
